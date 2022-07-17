@@ -1,7 +1,7 @@
 spring:
   datasource:
-    driverClassName: org.postgresql.Driver
-    maxActive: '10'
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: '15'
     maxIdle: '5'
     minIdle: '2'
     initialSize: '5'
