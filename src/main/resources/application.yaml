@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kipao
+    dialect: InnoDB
+    username: root
+    password: Oracle!19
+    maxActive: '15'
+    maxIdle: '5'
+    minIdle: '2'
+    initialSize: '5'
+    removeAbandoned: 'true'
+    resources: 
+        cache:
+            cachecontrol:
+                max-age: 120
+                must-revalidate: true
+    http:
+     gzip:
+       enabled: true
+       min-gzip-size: 5
+       deflate-compression-level: 9
+       mime-types: text/html,text/css,application/javascript,application/json,application/font-sfnt,application/font-woff,application/font-woff2       
+    
+    
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: create
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        
+server:
+   port: 8090
